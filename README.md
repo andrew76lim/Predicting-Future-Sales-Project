@@ -2,7 +2,10 @@
 
 ## Basic Information
 - **Person Developing Model**: Andrew Lim
+- **Developer Email**: andrew76lim@gwmail.gwu.edu
 - **Model Date**: November 26, 2025
 - **Model Version**: 1.0
-- **License**:
+- **License**: MIT
 - **Model Code**:
+
+**Intended Use**

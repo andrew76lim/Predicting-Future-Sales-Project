@@ -4,5 +4,5 @@
 - **Person Developing Model**: Andrew Lim
 - **Model Date**: November 26, 2025
 - **Model Version**: 1.0
-- **License**"
+- **License**:
 - **Model Code**:

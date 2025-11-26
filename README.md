@@ -2,4 +2,4 @@
 
 ## Basic Information
 
-- ** Person Developing Model **: Andrew Lim
+- **Person Developing Model**: Andrew Lim

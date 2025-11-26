@@ -6,6 +6,6 @@
 - **Model Date**: November 26, 2025
 - **Model Version**: 1.0
 - **License**: MIT
-- **Model Code**:
+- **Model Code**: 
 
 ### **Intended Use**

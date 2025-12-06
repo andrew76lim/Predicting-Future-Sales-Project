@@ -1,12 +1,12 @@
-# Predicting Future Sales Project
+# Predicting Future Sales Project: Andrew Lim
 
 ## Basic Information
 - **Person Developing Model**: Andrew Lim
 - **Developer Email**: andrew76lim@gwmail.gwu.edu
-- **Model Date**: November 26, 2025
-- **Model Version**: 1.0
-- **License**: MIT
-- **Model Code**: 
+- **Model Date**: December 6, 2025
+- **Model Version**: V1.0
+- **License**: MIT Liscense
+- **Model Code**: https://colab.research.google.com/drive/1fGBhN3r65Vyl-gLQ1WS3yeXP1E8OJ78c?usp=sharing
 
 ### **Intended Use**
 

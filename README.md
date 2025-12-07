@@ -100,45 +100,45 @@
 **Lag Features**
 | **Name** | **Modeling Role** | **Measurement Level** | **Description** |
 |---------|-------------------|------------------------|-----------------|
-| **date_block_num** | input | int | Month index ranging from 0 to 33 representing each month in the dataset. |
-| **shop_id** | input | int | Identifier for the shop; categorical feature representing store location/type. |
-| **item_id** | input | int | Identifier for each product; categorical feature. |
-| **month** | input | int | Calendar month extracted from `month_start` (1–12). |
-| **days_in_m** | input | int | Number of unique selling days within the month for that shop–item combination. |
-| **item_cnt_month** | target | float | Monthly number of units sold for a given `(shop_id, item_id)`; clipped to [0, 20] for Kaggle submission. |
-| **item_cnt_month_uncl** | helper variable | float | Uncapped monthly sales count before clipping or adjustments. |
-| **revenue** | helper variable | float | Total item revenue: `item_price * item_cnt_day` aggregated by month. |
-| **purch_cnt_month** | helper variable | int | Count of days during which at least one unit was sold. |
-| **avg_price_mnth** | input | float | Average item price for the shop–item pair during the month. |
-| **avg_price_global** | input | float | Long-term global average price for each item across all months < 34. |
-| **avg_price_mnth_lag1** | input | float | Lag-1 (previous month) average item price at the item level. |
-| **avg_price_mnth_lag2** | input | float | Lag-2 (two months prior) average item price at the item level. |
-| **avg_price_mnth_sh_lag1** | input | float | Lag-1 average price at the shop–item level. |
-| **avg_price_mnth_sh_lag2** | input | float | Lag-2 average price at the shop–item level. |
-| **avg_price_mnth_grad** | input | float | Price gradient ratio: lag1 ÷ lag2, measuring direction of price movement. |
-| **avg_price_mnth_to_gl** | input | float | Ratio of current month’s price to global long-term average price. |
-| **avg_price_mnth_sh_grad** | input | float | Gradient of shop–item price: lag1 ÷ lag2. |
-| **item_category_id** | input | int | Raw category identifier for the item. |
-| **item_category_type_encoded** | input | int | Encoded major category type derived from item category names. |
-| **item_category_subtype_encoded** | input | int | Encoded subcategory derived from item category names. |
-| **shop_city_encoded** | input | int | Encoded city parsed from the shop name. |
-| **shop_type_encoded** | input | int | Encoded type of shop (mall, market, specialized shop, etc.). |
-| **lagged_it_mean** | input | float | Cumulative mean sales per item up to the previous month. |
-| **lagged_sh_it_mean** | input | float | Cumulative mean sales per shop–item pair up to the previous month. |
-| **item_cnt_month_sum_lag_1** | input | float | Shop–item sales from 1 month ago. |
-| **item_cnt_month_sum_lag_2** | input | float | Shop–item sales from 2 months ago. |
-| **item_cnt_month_sum_lag_3** | input | float | Shop–item sales from 3 months ago. |
-| **item_cnt_month_sum_lag_6** | input | float | Shop–item sales from 6 months ago. |
-| **item_cnt_month_sum_lag_12** | input | float | Shop–item sales from 12 months ago. |
-| **item_cnt_month_mean_lag_1** | input | float | Item-level mean sales from 1 month ago. |
-| **item_cnt_month_mean_lag_2** | input | float | Item-level mean sales from 2 months ago. |
-| **item_cnt_month_mean_lag_3** | input | float | Item-level mean sales from 3 months ago. |
-| **item_cnt_month_mean_shop_lag_1** | input | float | Shop-level mean sales from 1 month ago. |
-| **item_cnt_month_mean_shop_lag_2** | input | float | Shop-level mean sales from 2 months ago. |
-| **item_cnt_month_mean_shop_lag_3** | input | float | Shop-level mean sales from 3 months ago. |
-| **item_cnt_month_item_category_id_mean_lag_1** | input | float | Category-level mean sales from 1 month ago. |
-| **item_cnt_month_item_category_id_mean_lag_2** | input | float | Category-level mean sales from 2 months ago. |
-| **item_cnt_month_item_category_id_mean_lag_3** | input | float | Category-level mean sales from 3 months ago. |
+| **date_block_num** | input | int | Month index ranging from 0 to 33 representing each month in the dataset |
+| **shop_id** | input | int | Identifier for the shop, categorical feature representing store location/type |
+| **item_id** | input | int | Identifier for each product, categorical feature |
+| **month** | input | int | Calendar month extracted from `month_start` (1–12) |
+| **days_in_m** | input | int | Number of unique selling days within the month for that shop–item combination |
+| **item_cnt_month** | target | float | Monthly number of units sold for a given `(shop_id, item_id)`; clipped to [0, 20] for Kaggle submission |
+| **item_cnt_month_uncl** | helper variable | float | Uncapped monthly sales count before clipping or adjustments |
+| **revenue** | helper variable | float | Total item revenue, `item_price * item_cnt_day` aggregated by month |
+| **purch_cnt_month** | helper variable | int | Count of days during which at least one unit was sold |
+| **avg_price_mnth** | input | float | Average item price for the shop–item pair during the month |
+| **avg_price_global** | input | float | Long-term global average price for each item across all months < 34 |
+| **avg_price_mnth_lag1** | input | float | Lag 1 (previous month) average item price at the item level |
+| **avg_price_mnth_lag2** | input | float | Lag 2 (two months prior) average item price at the item level |
+| **avg_price_mnth_sh_lag1** | input | float | Lag 1 average price at the shop–item level |
+| **avg_price_mnth_sh_lag2** | input | float | Lag 2 average price at the shop–item level |
+| **avg_price_mnth_grad** | input | float | Price gradient ratio, lag1 / lag2, measuring direction of price movement |
+| **avg_price_mnth_to_gl** | input | float | Ratio of current month’s price to global long-term average price |
+| **avg_price_mnth_sh_grad** | input | float | Gradient of shop item price: lag1 / lag2 |
+| **item_category_id** | input | int | Raw category identifier for the item |
+| **item_category_type_encoded** | input | int | Encoded major category type derived from item category names |
+| **item_category_subtype_encoded** | input | int | Encoded subcategory derived from item category names |
+| **shop_city_encoded** | input | int | Encoded city parsed from the shop name |
+| **shop_type_encoded** | input | int | Encoded type of shop (mall, market, specialized shop)       |
+| **lagged_it_mean** | input | float | Cumulative mean sales per item up to the previous month |
+| **lagged_sh_it_mean** | input | float | Cumulative mean sales per shop item pair up to the previous month |
+| **item_cnt_month_sum_lag_1** | input | float | Shop item sales from 1 month ago |
+| **item_cnt_month_sum_lag_2** | input | float | Shop item sales from 2 months ago |
+| **item_cnt_month_sum_lag_3** | input | float | Shop item sales from 3 months ago |
+| **item_cnt_month_sum_lag_6** | input | float | Shop item sales from 6 months ago |
+| **item_cnt_month_sum_lag_12** | input | float | Shop item sales from 12 months ago |
+| **item_cnt_month_mean_lag_1** | input | float | Item level mean sales from 1 month ago |
+| **item_cnt_month_mean_lag_2** | input | float | Item level mean sales from 2 months ago |
+| **item_cnt_month_mean_lag_3** | input | float | Item level mean sales from 3 months ago |
+| **item_cnt_month_mean_shop_lag_1** | input | float | Shop level mean sales from 1 month ago |
+| **item_cnt_month_mean_shop_lag_2** | input | float | Shop level mean sales from 2 months ago |
+| **item_cnt_month_mean_shop_lag_3** | input | float | Shop level mean sales from 3 months ago |
+| **item_cnt_month_item_category_id_mean_lag_1** | input | float | Category level mean sales from 1 month ago |
+| **item_cnt_month_item_category_id_mean_lag_2** | input | float | Category level mean sales from 2 months ago |
+| **item_cnt_month_item_category_id_mean_lag_3** | input | float | Category level mean sales from 3 months ago |
 
 ## Test Data
 

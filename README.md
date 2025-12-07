@@ -118,6 +118,56 @@
 
 ## Model Details
 
+**Columns used as inputs in the final model**
+- All features originally included are used except:
+- 'ID'
+- 'item_cnt_month'
+- 'item_cnt_month_uncl'
+- 'revenue'
+- 'purch_cnt_month'
+- 'avg_price_month'
+- These are a mix of targets, leakage, or fields not used in the training
+
+**Target in the Final Month**
+- 'item_cnt_month'
+-  The target is capped to [0,20]
+
+**Type of Model**
+- Gradient boosted decision trees using LightGBM
+
+**Software Used**
+- Python 3.10
+- Pandas 2.0
+- Numpy 1.26
+- LightGBM 4
+- Scikit-learn 1.5
+- Seaborn 0.13
+- Matplotlib 3.8
+
+**Version of Modeling Software**
+- LightGBM v4.x
+
+**Hyperparameters**
+- yaml
+- Objective: MSE
+- Metric: RMSE
+- Num_leaves: 255
+- Learning_rate: 0.005
+- Feature_fraction: 0.75
+- Bagging_fraction: 0.75
+- Bagging_freq: 5
+- Force_col_wise: true
+- Random_state: 10
+- Num_boost_round: 1500
+- Early_stopping_rounds: 100
+- The model is trained with early stopping using month-33 validation
+
+
+
+
+
+
+
 
 
 ## Citations:

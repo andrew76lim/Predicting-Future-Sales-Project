@@ -47,6 +47,43 @@
 | Validation | 33                        | Model selection, early stopping       |
 | Test       | 34                        | Kaggle leaderboard scoring            |
 
+**Number of Rows in Training and Validation Data**
+- After creating the matrix:
+- Training rows = 2.4 to 2.7 million
+- Validation rows = 214,000
+
+**Data Dictionary**
+
+**Identifier and Calendar Columns**
+| Name             | Role        | Level       | Description                                |
+|------------------|-------------|-------------|--------------------------------------------|
+| `date_block_num` | Feature     | Ordinal     | Month index (0–34)                         |
+| `shop_id`        | Feature     | Categorical | Store ID                                   |
+| `item_id`        | Feature     | Categorical | Item ID                                    |
+| `month`          | Feature     | Categorical | Calendar month (1–12)                      |
+| `days_in_m`      | Feature     | Integer     | Number of selling days in that month       |
+
+**Target Variables**
+| Name                 | Role        | Level       | Description                                             |
+|----------------------|-------------|-------------|---------------------------------------------------------|
+| `item_cnt_month`     | Target      | Continuous  | Monthly sales per `(shop_id, item_id)`, capped [0,20].  |
+| `item_cnt_month_uncl`| Helper      | Continuous  | Uncapped total monthly `item_cnt_day`.                  |
+
+**Price Features**
+
+
+**Category and Shop Data**
+
+
+**Mean Envodings**
+
+
+**Lag Features**
+
+
+## Test Data
+
+
 **Citations:**
 
 https://www.kaggle.com/code/faressayah/data-science-best-practices-with-pandas-2-0-p2/notebook

@@ -52,52 +52,7 @@
 - Training rows = 2.4 to 2.7 million
 - Validation rows = 214,000
 
-**Data Dictionary**
-
-**Identifier and Calendar Columns**
-| Name             | Role        | Level       | Description                                |
-|------------------|-------------|-------------|--------------------------------------------|
-| `date_block_num` | Feature     | Ordinal     | Month index (0–34)                         |
-| `shop_id`        | Feature     | Categorical | Store ID                                   |
-| `item_id`        | Feature     | Categorical | Item ID                                    |
-| `month`          | Feature     | Categorical | Calendar month (1–12)                      |
-| `days_in_m`      | Feature     | Integer     | Number of selling days in that month       |
-
-**Target Variables**
-| Name                 | Role        | Level       | Description                                             |
-|----------------------|-------------|-------------|---------------------------------------------------------|
-| `item_cnt_month`     | Target      | Continuous  | Monthly sales per `(shop_id, item_id)`, capped [0,20].  |
-| `item_cnt_month_uncl`| Helper      | Continuous  | Uncapped total monthly `item_cnt_day`.                  |
-
-**Price Features**
-| Name                      | Role    | Level       | Description                                     |
-|---------------------------|---------|-------------|-------------------------------------------------|
-| `avg_price_mnth`          | Feature | Continuous  | Monthly average item price                      |
-| `avg_price_global`        | Feature | Continuous  | Long run global average price                   |
-| `avg_price_mnth_lag1`     | Feature | Continuous  | Item lag 1 price                                |
-| `avg_price_mnth_lag2`     | Feature | Continuous  | Item lag 2 price                                |
-| `avg_price_mnth_sh_lag1`  | Feature | Continuous  | Shop item lag 1 price                           |
-| `avg_price_mnth_sh_lag2`  | Feature | Continuous  | Shop item lag 2 price                           |
-| `avg_price_mnth_grad`     | Feature | Continuous  | Price gradient (item lag1 / lag2)               |
-| `avg_price_mnth_to_gl`    | Feature | Continuous  | Current price / global average price            |
-| `avg_price_mnth_sh_grad`  | Feature | Continuous  | Shop item price gradient                        |
-
-**Category and Shop Data**
-| Name                            | Role    | Level       | Description                                   |
-|---------------------------------|---------|-------------|-----------------------------------------------|
-| `item_category_id`              | Feature | Categorical | Raw category ID                               |
-| `item_category_type_encoded`    | Feature | Categorical | Encoded high level category type              |
-| `item_category_subtype_encoded` | Feature | Categorical | Encoded fine grained subtype                  |
-| `shop_city_encoded`             | Feature | Categorical | Encoded city extracted from shop name         |
-| `shop_type_encoded`             | Feature | Categorical | Encoded shop type                             |
-
-**Mean Encodings**
-| Name               | Role    | Level       | Description                                      |
-|--------------------|---------|-------------|--------------------------------------------------|
-| `lagged_it_mean`   | Feature | Continuous  | Cumulative mean sales per item                   |
-| `lagged_sh_it_mean`| Feature | Continuous  | Cumulative mean sales per shop item pair         |
-
-**Lag Features**
+**Training Data Dictionary**
 | **Name** | **Modeling Role** | **Measurement Level** | **Description** |
 |---------|-------------------|------------------------|-----------------|
 | **date_block_num** | input | int | Month index ranging from 0 to 33 representing each month in the dataset |
@@ -142,8 +97,30 @@
 
 ## Test Data
 
+**Sources**
+- 'test.csv' from Kaggle
 
-**Citations:**
+**Number of Rows**
+- 214,200 rows
+
+**Differences from Training Data**
+| Aspect              | Training Data                  |
+|---------------------|--------------------------------|
+| Time Index          | 'date_block_num' 0-33          |
+| Target              | Present ('item_cnt_month')     |
+| Engineered Features | Created from history           |
+| IDs                 | No 'ID' column                 |
+
+**Kaggle Submission**
+- Final file: 'submission-15.csv'
+- Public leaderboard RMSE: 0.95860
+- Public Team File: ANDREWLIM
+
+## Model Details
+
+
+
+## Citations:
 
 https://www.kaggle.com/code/faressayah/data-science-best-practices-with-pandas-2-0-p2/notebook
 https://www.kaggle.com/code/sangseoseo/predictfuturesalesperformanceenhancement/input

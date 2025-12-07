@@ -91,7 +91,7 @@
 | `shop_city_encoded`             | Feature | Categorical | Encoded city extracted from shop name         |
 | `shop_type_encoded`             | Feature | Categorical | Encoded shop type                             |
 
-**Mean Envodings**
+**Mean Encodings**
 | Name               | Role    | Level       | Description                                      |
 |--------------------|---------|-------------|--------------------------------------------------|
 | `lagged_it_mean`   | Feature | Continuous  | Cumulative mean sales per item                   |

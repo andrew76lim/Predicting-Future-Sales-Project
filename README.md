@@ -70,13 +70,32 @@
 | `item_cnt_month_uncl`| Helper      | Continuous  | Uncapped total monthly `item_cnt_day`.                  |
 
 **Price Features**
-
+| Name                      | Role    | Level       | Description                                     |
+|---------------------------|---------|-------------|-------------------------------------------------|
+| `avg_price_mnth`          | Feature | Continuous  | Monthly average item price                      |
+| `avg_price_global`        | Feature | Continuous  | Long run global average price                   |
+| `avg_price_mnth_lag1`     | Feature | Continuous  | Item lag 1 price                                |
+| `avg_price_mnth_lag2`     | Feature | Continuous  | Item lag 2 price                                |
+| `avg_price_mnth_sh_lag1`  | Feature | Continuous  | Shop item lag 1 price                           |
+| `avg_price_mnth_sh_lag2`  | Feature | Continuous  | Shop item lag 2 price                           |
+| `avg_price_mnth_grad`     | Feature | Continuous  | Price gradient (item lag1 / lag2)               |
+| `avg_price_mnth_to_gl`    | Feature | Continuous  | Current price / global average price            |
+| `avg_price_mnth_sh_grad`  | Feature | Continuous  | Shop item price gradient                        |
 
 **Category and Shop Data**
-
+| Name                            | Role    | Level       | Description                                   |
+|---------------------------------|---------|-------------|-----------------------------------------------|
+| `item_category_id`              | Feature | Categorical | Raw category ID                               |
+| `item_category_type_encoded`    | Feature | Categorical | Encoded high level category type              |
+| `item_category_subtype_encoded` | Feature | Categorical | Encoded fine grained subtype                  |
+| `shop_city_encoded`             | Feature | Categorical | Encoded city extracted from shop name         |
+| `shop_type_encoded`             | Feature | Categorical | Encoded shop type                             |
 
 **Mean Envodings**
-
+| Name               | Role    | Level       | Description                                      |
+|--------------------|---------|-------------|--------------------------------------------------|
+| `lagged_it_mean`   | Feature | Continuous  | Cumulative mean sales per item                   |
+| `lagged_sh_it_mean`| Feature | Continuous  | Cumulative mean sales per shop item pair         |
 
 **Lag Features**
 

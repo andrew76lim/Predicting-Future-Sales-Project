@@ -40,7 +40,8 @@
 
 **How Training Data was Divided Into Training and Validation Data**
 - Using validation split for model selection, the data was divided chronologically
-| Split       | Months (`date_block_num`) | Purpose                               |
+
+| Split      | Months (`date_block_num`) | Purpose                               |
 |------------|---------------------------|---------------------------------------|
 | Training   | 19–32                     | LightGBM model fitting                |
 | Validation | 33                        | Model selection, early stopping       |

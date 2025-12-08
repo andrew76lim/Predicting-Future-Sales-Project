@@ -180,6 +180,10 @@
 | Validation  | 0.777630   |
 | Kaggle      | 0.96255    |
 - The higher Kaggle RMSE reflects the more difficult distribution of the held-out test set
+- Pulled from Kaggle:
+<img width="1328" height="617" alt="Screenshot 2025-12-08 at 2 10 31 PM" src="https://github.com/user-attachments/assets/7062f34c-0497-48a7-a4de-fcb9f5fc4bc0" />
+<img width="1298" height="241" alt="Screenshot 2025-12-08 at 2 11 03 PM" src="https://github.com/user-attachments/assets/f77b88a4-b7be-4722-b5ad-00c83efa0461" />
+
 
 **Different Plots**
 1. Monthly Sales Trend

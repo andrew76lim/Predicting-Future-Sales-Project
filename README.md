@@ -1,5 +1,6 @@
 # Predicting Future Sales Project: Andrew Lim
 
+
 ## Basic Information
 - **Person Developing Model**: Andrew Lim
 - **Developer Email**: andrew76lim@gwmail.gwu.edu
@@ -7,6 +8,7 @@
 - **Model Version**: V1.0
 - **License**: MIT Liscense
 - **Model Code**: https://colab.research.google.com/drive/1fGBhN3r65Vyl-gLQ1WS3yeXP1E8OJ78c?usp=sharing
+
 
 ### **Intended Use**
 
@@ -25,6 +27,7 @@
 - Real time forecasting
 - Automated financial or inventory decision making without need of human review
 - Modeling promotions, elasticity, or macroeconomic conditions
+
 
 ## Training Data
 
@@ -95,6 +98,7 @@
 | **item_cnt_month_item_category_id_mean_lag_2** | input | float | Category level mean sales from 2 months ago |
 | **item_cnt_month_item_category_id_mean_lag_3** | input | float | Category level mean sales from 3 months ago |
 
+
 ## Test Data
 
 **Sources**
@@ -115,6 +119,7 @@
 - Final file: 'submission-15.csv'
 - Public leaderboard RMSE: 0.95860
 - Public Team File: ANDREWLIM
+
 
 ## Model Details
 
@@ -163,10 +168,56 @@
 - The model is trained with early stopping using month-33 validation
 
 
+## Quantitative Analysis
+
+**Metrics Used**
+- Since this is a regression task, the root mean squared error (RMSE): which is also what is scored on the competition
+
+**Final Values (Training, Validation, Test)**
+| Dataset     | RMSE       |
+|-------------|------------|
+| Training    | 0.72517    |
+| Validation  | 0.76922    |
+| Kaggle      | 0.95860    |
+- The higher Kaggle RMSE reflects the more difficult distribution of the held-out test set
+
+**Different Plots**
+1. Monthly Sales Trend
+2. LightGBM Feature
+3. Actual vs Predicted Validation
+4. Validation Error Distribution
 
 
+## Ethical Considerations
 
+### Potential Negative Impacts
 
+**Mathematical and Software Risks**
+- Overfitting to historical lags when the market shifts
+- Sensitivity to outliers distorting price gradient features
+- Few items producing unstable lag signals
+
+**Real World Risks**
+- Who: inventory planners using forecast
+- What: incorrect forecasts can result in either shortages or excess inventory
+- When: seasonality changes, economic shocks, and supply chain disruptions
+- How: over reliance on point predicitions
+
+### Potential Uncertainties
+
+**Mathematical and Software Uncertainties**
+- Having inconsistencies in retail demand
+- Encoded category and shop fields becoming different over time
+- Hyperparameter sensitivity and variance in boosted models
+
+**Real World Uncertainties**
+- Different forms of promotions, weather, macoeconomic conditions not included in the model
+- Risk of decision makers ot understanding the limits of the model
+
+### Unexpected Results
+- Price gradients were more predictive than raw prices
+- Caregory subtype encodings had strong predictive power
+- Very long lags of greater than 6 months had limited value which confirms short term recency is most important
 
 
 

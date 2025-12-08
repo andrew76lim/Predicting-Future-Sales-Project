@@ -7,7 +7,7 @@
 - **Model Date**: December 6, 2025
 - **Model Version**: V1.0
 - **License**: MIT Liscense
-- **Model Code**: https://colab.research.google.com/drive/1fGBhN3r65Vyl-gLQ1WS3yeXP1E8OJ78c?usp=sharing
+- **Model Code**: https://colab.research.google.com/drive/1zeuvNyhlBMxWQtJwj2vzWaFM_4d1mkYT?usp=sharing
 
 
 ### **Intended Use**

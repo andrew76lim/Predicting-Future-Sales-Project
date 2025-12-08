@@ -116,8 +116,8 @@
 | IDs                 | No 'ID' column                 |
 
 **Kaggle Submission**
-- Final file: 'submission-15.csv'
-- Public leaderboard RMSE: 0.95860
+- Final file: 'submission-20.csv'
+- Public leaderboard RMSE: 0.96255
 - Public Team File: ANDREWLIM
 
 

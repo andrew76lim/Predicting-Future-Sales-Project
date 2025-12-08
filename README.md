@@ -176,9 +176,9 @@
 **Final Values (Training, Validation, Test)**
 | Dataset     | RMSE       |
 |-------------|------------|
-| Training    | 0.72517    |
-| Validation  | 0.76922    |
-| Kaggle      | 0.95860    |
+| Training    | 0.739629   |
+| Validation  | 0.777630   |
+| Kaggle      | 0.96255    |
 - The higher Kaggle RMSE reflects the more difficult distribution of the held-out test set
 
 **Different Plots**

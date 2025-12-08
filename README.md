@@ -185,14 +185,17 @@
 1. Monthly Sales Trend
 <img width="625" height="308" alt="Screenshot 2025-12-07 at 8 50 38 PM" src="https://github.com/user-attachments/assets/a1d28f14-c397-4eda-b332-2675dec198fe" />
 
-
 2. LightGBM Feature
-
+<img width="633" height="618" alt="Screenshot 2025-12-07 at 8 51 24 PM" src="https://github.com/user-attachments/assets/f73153cf-61dd-43d8-9ead-e63959d6843c" />
 
 3. Actual vs Predicted Validation
-
+<img width="613" height="590" alt="Screenshot 2025-12-07 at 8 51 41 PM" src="https://github.com/user-attachments/assets/f3a781bc-dcf1-41ac-ae80-25e60ef9570a" />
 
 4. Validation Error Distribution
+<img width="614" height="313" alt="Screenshot 2025-12-07 at 8 52 06 PM" src="https://github.com/user-attachments/assets/e9e59301-1dac-49c2-9720-ff075ab085ac" />
+
+5. Heatmap for Key Factors
+<img width="603" height="509" alt="Screenshot 2025-12-07 at 8 52 42 PM" src="https://github.com/user-attachments/assets/c67e0cd3-6ede-4fdd-9ffc-1d5b4aaf7b34" />
 
 
 ## Ethical Considerations

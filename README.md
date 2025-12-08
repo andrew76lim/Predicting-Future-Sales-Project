@@ -183,8 +183,15 @@
 
 **Different Plots**
 1. Monthly Sales Trend
+<img width="625" height="308" alt="Screenshot 2025-12-07 at 8 50 38 PM" src="https://github.com/user-attachments/assets/a1d28f14-c397-4eda-b332-2675dec198fe" />
+
+
 2. LightGBM Feature
+
+
 3. Actual vs Predicted Validation
+
+
 4. Validation Error Distribution
 
 

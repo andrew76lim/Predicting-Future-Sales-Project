@@ -36,9 +36,6 @@
 - item_categories.csv
 - items.csv
 - sales_train.csv
-- sample_submission.csv
-- shops.csv
-- test.csv
 - This is all stored in 'data/raw/'
 
 **How Training Data was Divided Into Training and Validation Data**

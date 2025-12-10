@@ -16,7 +16,7 @@
 - Forecast the next month 'item_cnt_month' for each '(shop_id, item_id)' pair
 - Select the best model using a validation split
 - Produce predictions for the Kaggle data and evaluate through code with learning and inspiration from some of the leaderboard codes
-- Demonstrate teh complete ML workflow for the project
+- Demonstrate the complete ML workflow for the project
 
 **Intended Users**
 - Professor Hall in the Data Ethics Class

@@ -105,12 +105,10 @@
 - 214,200 rows
 
 **Differences from Training Data**
-| Aspect              | Training Data                  |
-|---------------------|--------------------------------|
-| Time Index          | 'date_block_num' 0-33          |
-| Target              | Present ('item_cnt_month')     |
-| Engineered Features | Created from history           |
-| IDs                 | No 'ID' column                 |
+- Training data contains daily sales with full features ('date', 'shop_id', 'item_id', 'item_price', 'item_cnt_day') and includes the targer which is later aggregated for modeling
+- Test data only includes 'ID', 'shop_id', and 'item_id' for the forecast month and has no sales values or prices so it must be predicted
+- Training data shows real historical behavior, while test data represents unseen future combinations, including many shop item pairs that never appeared in the original training
+- The model is trained almost entirely on the processed training set and predictions are filled into the test set structure for Kaggle submission
 
 **Kaggle Submission**
 - Final file: 'submission-20.csv'
@@ -223,7 +221,7 @@
 
 **Real World Uncertainties**
 - Different forms of promotions, weather, macoeconomic conditions not included in the model
-- Risk of decision makers ot understanding the limits of the model
+- Risk of decision makers to understanding the limits of the model
 
 ### Unexpected Results
 - Price gradients were more predictive than raw prices

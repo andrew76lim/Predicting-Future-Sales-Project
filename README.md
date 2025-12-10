@@ -4,7 +4,7 @@
 ## Basic Information
 - **Person Developing Model**: Andrew Lim
 - **Developer Email**: andrew76lim@gwmail.gwu.edu
-- **Model Date**: December 6, 2025
+- **Model Date**: December 10, 2025
 - **Model Version**: V1.0
 - **License**: MIT Liscense
 - **Model Code**: https://colab.research.google.com/drive/1zeuvNyhlBMxWQtJwj2vzWaFM_4d1mkYT?usp=sharing

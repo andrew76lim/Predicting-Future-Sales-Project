@@ -49,7 +49,7 @@
 
 **Number of Rows in Training and Validation Data**
 - After creating the matrix:
-- Training rows = 2.4 to 2.7 million
+- Training rows = 2.9 million
 - Validation rows = 214,000
 
 **Training Data Dictionary**

@@ -94,7 +94,7 @@
 | **item_cnt_month_item_category_id_mean_lag_1** | input | float | Category level mean sales from 1 month ago |
 | **item_cnt_month_item_category_id_mean_lag_2** | input | float | Category level mean sales from 2 months ago |
 | **item_cnt_month_item_category_id_mean_lag_3** | input | float | Category level mean sales from 3 months ago |
-
+- Lags was something I added on my own in order to make the coding work for my project
 
 ## Test Data
 
